@@ -1,23 +1,23 @@
 #include<bits/stdc++.h>
 using namespace std;
-class time 
+class Time 
 {
     int hours;
     int minutes;
     public:
-    void getline(int h,int m)
+    void getTime(int h,int m)
     {
         hours =h;
         minutes=m;
     }
-    void puttime(void)
+    void putTime(void)
     {
         cout<<hours<<"hours and";
         cout<<minutes<<"minutes "<<"\n";
     }
-    void sum(time,time);//declaration with objects as arguments
+    void sum(Time,Time);//declaration with objects as arguments
 };
-    void time:: sum (time t1,time t2)//t1,t2 are objects
+    void Time:: sum (Time t1,Time t2)//t1,t2 are objects
     {
         minutes=t1.minutes+t2.minutes;
         hours=minutes/60;
@@ -26,13 +26,15 @@ class time
     }
     int main()
     {
-        time T1,T2,T3;
-        T1.gettime(2,45);//get T1
-        T2.gettime(3,30);//get T2
+        Time time1;
+        Time time2;
+        Time time3;
+        time1.getTime(2,45);//get T1
+        time2.getTime(3,30);//get T2
 
-        T3.sum(T1,T2);//T3=T1+T2
-        cout<<"T1 =";T1.puttime();// display T1
-        cout<<"T2 =";T2.puttime();//display T2
-        cout<<"T3 =";T3.puttime();//display T3
+        time3.sum(time1,time2);//T3=T1+T2
+        cout<<"time1 =";time1.putTime();// display T1
+        cout<<"time2 =";time2.putTime();//display T2
+        cout<<"time3 =";time3.putTime();//display T3
         return 0;
     }
